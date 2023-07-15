@@ -13,6 +13,8 @@ function App() {
   const [appActive, setAppActive] = useState(false);
   const [cantBeZero, setCantBeZero] = useState(false);
 
+  console.log("name");
+
   // Update UI
   useEffect(() => {
     if (!appActive) {
