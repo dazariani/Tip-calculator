@@ -1,0 +1,221 @@
+:root {
+  --clr-body: rgb(197, 228, 231);
+  --clr-green-dark: rgb(0, 71, 75);
+  --clr-green-light: rgb(38, 194, 174);
+  --clr-grey-dark: rgb(94, 122, 125);
+  --clr-grey-light: rgb(127, 157, 159);
+  --clr-grey-input: rgb(243, 249, 250);
+  --clr-white: rgb(255, 255, 255);
+  --clr-red: rgb(225, 116, 87);
+
+  --clr-hover-green: rgb(159, 232, 223);
+}
+
+body {
+  background: var(--clr-body);
+  font-family: "Space Mono";
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+h2 {
+  font-size: 16px;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px;
+}
+.App img {
+  max-width: 86px;
+  margin-bottom: 40px;
+}
+.container {
+  max-width: 375px;
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-white);
+  border-radius: 25px 25px 0 0;
+}
+.bill-box {
+  margin-bottom: 32px;
+}
+input {
+  background: var(--clr-grey-input);
+  border: 2px solid #fff;
+  transition: 0.2s ease-in-out;
+}
+.bill-box input {
+  width: 100%;
+  height: 48px;
+  font-family: "Space Mono";
+  font-size: 24px;
+  text-align: end;
+  padding-inline: 15px;
+}
+input:focus {
+  outline: none;
+}
+.bill-box label {
+  margin-bottom: 16px;
+}
+.tipboard-box {
+  margin-bottom: 32px;
+}
+.tipboard-box p {
+  margin-bottom: 16px;
+}
+.percent-btn {
+  max-width: 146px;
+  height: 48px;
+  color: var(--clr-white);
+  background: var(--clr-green-dark);
+  padding-block: 10px;
+  text-align: center;
+  line-height: 1.2;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+.percent-input {
+  max-width: 146px;
+  width: 100%;
+  height: 48px;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  padding-inline: 10px;
+  border-radius: 5px;
+}
+.percent-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  font-size: 24px;
+}
+
+/* output box */
+.output-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-green-dark);
+  padding-inline: 24px;
+  padding-block: 39px 24px;
+  border-radius: 15px;
+}
+.btn {
+  width: 100%;
+  height: 48px;
+  color: var(--clr-green-dark);
+  background: rgb(13, 104, 109);
+  padding-block: 10px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+.out-field-box {
+  width: 100%;
+  margin-bottom: 35px;
+}
+.out-field-box:first-child {
+  margin-bottom: 24px;
+}
+.content-box + span {
+  font-size: 32px;
+  color: var(--clr-green-light);
+}
+.content-box {
+  color: var(--clr-white);
+}
+.content-box span {
+  color: var(--clr-grey-dark);
+  font-size: 14px;
+}
+.note {
+  color: red;
+  margin-bottom: 5px;
+}
+
+/* onclick classes */
+.active-perc {
+  color: var(--clr-green-dark);
+  background: var(--clr-green-light);
+}
+.active-reset {
+  color: var(--clr-green-dark);
+  background: var(--clr-green-light);
+}
+
+@media only screen and (min-width: 980px) {
+  .App {
+    margin-top: 163px;
+  }
+  .container {
+    width: 920px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 25px;
+    box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.2);
+    gap: 20px;
+  }
+  .container section {
+    max-width: 413px;
+    max-height: 417px;
+  }
+  .percent-box {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    justify-items: center;
+  }
+  .percent-btn,
+  .percent-input {
+    width: 100%;
+  }
+  .percent-btn,
+  button {
+    cursor: pointer;
+  }
+  .out-field-box {
+    margin-bottom: 134px;
+  }
+  .tipboard-box {
+    margin-bottom: 40px;
+  }
+  .content-box + span {
+    font-size: 48px;
+  }
+  input:hover {
+    border: 2px solid var(--clr-hover-green);
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+  }
+  button:hover {
+    background: var(--clr-hover-green);
+  }
+  .percent-btn:hover {
+    background: var(--clr-hover-green);
+    color: var(--clr-green-dark);
+  }
+}
