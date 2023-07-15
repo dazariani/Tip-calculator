@@ -13,8 +13,6 @@ function App() {
   const [appActive, setAppActive] = useState(false);
   const [cantBeZero, setCantBeZero] = useState(false);
 
-  const [sum, setSum] = useState(false);
-
   // Update UI
   useEffect(() => {
     if (!appActive) {
