@@ -6,7 +6,6 @@ function InputField({
   value,
   setValue,
   onSelect,
-  type,
   min,
   setAppActive,
   cantBeZero,
@@ -30,7 +29,6 @@ function InputField({
           ...noteStyle,
           background: `url(${image}) no-repeat 10px 50%  #f3f9fa`,
         }}
-        type={type}
         placeholder="0"
         min={min}
       />
