@@ -39,14 +39,16 @@ function Input({
   return (
     <section>
       <InputField
-        initValue=""
-        appActive={appActive}
+        // initValue=""
+        // appActive={appActive}
         setAppActive={setAppActive}
-        setTipAmount={setTipAmount}
+        // setTipAmount={setTipAmount}
         value={billValue}
         setValue={setBillValue}
         title="Bill"
         image={dolarImg}
+        type="number"
+        min="0"
       />
       <TipBoard
         cantBeZero={cantBeZero}
@@ -60,14 +62,14 @@ function Input({
       />
       <InputField
         cantBeZero={cantBeZero}
-        initValue="1"
-        appActive={appActive}
+        // initValue="1"
+        // appActive={appActive}
         setAppActive={setAppActive}
         type="number"
         min="0"
-        setTipAmount={setTipAmount}
+        // setTipAmount={setTipAmount}
         value={personValue}
-        isValueNull={personValue === "0"}
+        // isValueNull={personValue === "0"}
         setValue={setPersonValue}
         title="Number of People"
         image={personImg}

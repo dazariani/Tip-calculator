@@ -17,7 +17,7 @@ function Output({
     if (percentNum) {
       const tip = (billValue * percentNum) / 100 / personValue;
       const total = billValue / personValue + tip;
-      if (percentNum && !isNaN(tip) && !isNaN(total) && tip !== Infinity) {
+      if (percentNum && !isNaN(tip) && tip !== Infinity) {
         setTipAmount(tip.toFixed(2));
         setTotalAmount(total.toFixed(2));
       }

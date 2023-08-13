@@ -41,7 +41,7 @@ function TipBoard({
         <input
           value={customPerc}
           onChange={(e) => {
-            setCustomPerc(e.target.value);
+            e.target.value >= 0 && setCustomPerc(e.target.value);
             setAppActive(true);
           }}
           className="percent-input"

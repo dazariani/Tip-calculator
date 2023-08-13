@@ -9,6 +9,7 @@ function InputField({
   min,
   setAppActive,
   cantBeZero,
+  type,
 }) {
   const noteStyle = cantBeZero
     ? { border: "2px solid red", borderRadius: "5px" }
@@ -22,14 +23,16 @@ function InputField({
         onSelect={onSelect}
         value={value}
         onChange={(e) => {
-          setValue(e.target.value);
+          e.target.value > 0 &&
+            !e.target.value.includes(".") &&
+            setValue(e.target.value);
           setAppActive(true);
         }}
         style={{
           ...noteStyle,
           background: `url(${image}) no-repeat 10px 50%  #f3f9fa`,
         }}
-        type="number"
+        type={type}
         placeholder="0"
         min={min}
       />
