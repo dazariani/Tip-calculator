@@ -10,6 +10,7 @@ function InputField({
   setAppActive,
   cantBeZero,
   type,
+  max,
 }) {
   const noteStyle = cantBeZero
     ? { border: "2px solid red", borderRadius: "5px" }
@@ -23,7 +24,7 @@ function InputField({
         onSelect={onSelect}
         value={value}
         onChange={(e) => {
-          e.target.value > 0 &&
+          e.target.value >= 0 &&
             !e.target.value.includes(".") &&
             setValue(e.target.value);
           setAppActive(true);
@@ -35,6 +36,7 @@ function InputField({
         type={type}
         placeholder="0"
         min={min}
+        maxLength={max}
       />
     </div>
   );

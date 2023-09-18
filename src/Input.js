@@ -47,8 +47,9 @@ function Input({
         setValue={setBillValue}
         title="Bill"
         image={dolarImg}
-        type="number"
+        type="text"
         min="0"
+        max="5"
       />
       <TipBoard
         cantBeZero={cantBeZero}
@@ -65,7 +66,7 @@ function Input({
         // initValue="1"
         // appActive={appActive}
         setAppActive={setAppActive}
-        type="number"
+        type="text"
         min="0"
         // setTipAmount={setTipAmount}
         value={personValue}
@@ -73,6 +74,7 @@ function Input({
         setValue={setPersonValue}
         title="Number of People"
         image={personImg}
+        max="3"
       />
     </section>
   );
